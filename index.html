@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" >
+        
+        $(document).ready(function(){
+            animateSun();
+            var pos = 0;
+        });
+
+        function animateSun(){
+            var center_h = $(window).height() / 2;
+            var center_w = $(window).width() / 2;
+            $(".sun").animate({ top: center_h, left: center_w}, function(){
+                $(".a").animate({ top: center_h, left: center_w}, function(){
+                    animateSun();
+                });
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <img src="Earth.png" alt="earth img (your browser can't display" class="a">  </img>
+    <img src="Sun.png" alt="sun img (your browser can't display" class="sun">  </img>
+</body>
+</html>
+
+
+
+
